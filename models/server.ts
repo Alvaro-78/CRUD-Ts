@@ -5,7 +5,7 @@ class Server {
 	private app: Application;
 	private port: string;
 	private apiPaths = {
-		users: 'api/users',
+		users: '/api/users',
 	};
 
 	constructor() {
@@ -19,7 +19,7 @@ class Server {
 
 	listen() {
 		this.app.listen(this.port, () => {
-			console.log('Servidor corriendo' + '', this.port);
+			console.log('Servidor levantado en el puerto ' + '', this.port);
 		});
 	}
 }

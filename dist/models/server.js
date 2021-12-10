@@ -8,7 +8,7 @@ const userRouter_1 = __importDefault(require("../routes/userRouter"));
 class Server {
     constructor() {
         this.apiPaths = {
-            users: 'api/users',
+            users: '/api/users',
         };
         this.app = (0, express_1.default)();
         this.port = process.env.PORT || '8000';
@@ -18,7 +18,7 @@ class Server {
     }
     listen() {
         this.app.listen(this.port, () => {
-            console.log('Servidor corriendo' + '', this.port);
+            console.log('Servidor levantado en el puerto ' + '', this.port);
         });
     }
 }
