@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { getUsers } from '../controller/users';
-import { getUser } from '../controller/users';
-import { postUser } from '../controller/users';
-import { putUser } from '../controller/users';
-import { deleteUser } from '../controller/users';
+import { getUsers } from '../controller/usersController';
+import { getUser } from '../controller/usersController';
+import { postUser } from '../controller/usersController';
+import { putUser } from '../controller/usersController';
+import { deleteUser } from '../controller/usersController';
 
 const router = Router();
 

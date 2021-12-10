@@ -1,5 +1,5 @@
 import express, { Application } from 'express';
-import userRoutes from '../routes/userRouter';
+import userRouter from '../routes/userRouter';
 
 class Server {
 	private app: Application;
@@ -11,10 +11,11 @@ class Server {
 	constructor() {
 		this.app = express();
 		this.port = process.env.PORT || '8000';
+		this.routes();
 	}
 
 	routes() {
-		this.app.use(this.apiPaths.users, userRoutes);
+		this.app.use(this.apiPaths.users, userRouter);
 	}
 
 	listen() {

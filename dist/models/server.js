@@ -12,6 +12,7 @@ class Server {
         };
         this.app = (0, express_1.default)();
         this.port = process.env.PORT || '8000';
+        this.routes();
     }
     routes() {
         this.app.use(this.apiPaths.users, userRouter_1.default);
